@@ -10,6 +10,13 @@ import SwiftUI
 struct ContentView: View {
 
     @State var billAmount: String = ""
+
+    let formatter: NumberFormatter = {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            return formatter
+        }()
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Bill Amount")
@@ -17,9 +24,10 @@ struct ContentView: View {
                 .fontWeight(.semibold)
                 .foregroundColor(Color(red: 0.19607843137254902, green: 0.22745098039215686, blue: 0.33725490196078434))
                 .padding()
-            TextField("$153.01", text: $billAmount)
+            TextField("$153.01", value: $billAmount, formatter: formatter)
                 .padding()
-                .textFieldStyle(.roundedBorder)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.decimalPad)
                 .foregroundColor(Color(red: 0.2627450980392157, green: 0.4588235294117647, blue: 0.8627450980392157))
                 .font(.title2)
             Text("Tip Percent")
