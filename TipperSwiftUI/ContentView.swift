@@ -11,7 +11,7 @@ struct ContentView: View {
 
     @State var billAmount: String = ""
     var body: some View {
-        VStack() {
+        VStack(alignment: .leading) {
             Text("Bill Amount")
                 .font(.headline)
                 .fontWeight(.semibold)
