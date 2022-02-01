@@ -38,6 +38,32 @@ struct ContentView: View {
             .padding(.horizontal)
             .pickerStyle(.segmented)
 
+            Spacer()
+                .frame(height: 30)
+            VStack {
+                HStack(alignment: .center) {
+                    Text("Tip Amount")
+                        .primaryStyle()
+                    Spacer(minLength: 100)
+                    Text("$23.01")
+                    Spacer()
+                        .frame(width: 20)
+                }
+
+                Divider()
+                    .padding(.horizontal)
+
+                HStack(alignment: .center) {
+                    Text("Bill Total")
+                        .primaryStyle()
+                    Spacer(minLength: 100)
+                    Text("$176.42")
+                    Spacer()
+                        .frame(width: 20)
+                }
+            }
+            .background(Color(red: 0.8941176470588236, green: 0.9254901960784314, blue: 0.9803921568627451))
+            Spacer()
         }
     }
 }
