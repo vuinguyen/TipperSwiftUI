@@ -15,6 +15,7 @@
 		529D206D27A7537C00793317 /* TipperSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D206C27A7537C00793317 /* TipperSwiftUIUITests.swift */; };
 		529D206F27A7537C00793317 /* TipperSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D206E27A7537C00793317 /* TipperSwiftUIUITestsLaunchTests.swift */; };
 		529D207C27A75EC800793317 /* TipperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D207B27A75EC800793317 /* TipperViewModel.swift */; };
+		529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D207F27A9A39B00793317 /* SwiftUIExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		529D206C27A7537C00793317 /* TipperSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperSwiftUIUITests.swift; sourceTree = "<group>"; };
 		529D206E27A7537C00793317 /* TipperSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		529D207B27A75EC800793317 /* TipperViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipperViewModel.swift; sourceTree = "<group>"; };
+		529D207F27A9A39B00793317 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				529D205127A7537B00793317 /* TipperSwiftUIApp.swift */,
 				529D205327A7537B00793317 /* ContentView.swift */,
 				529D207B27A75EC800793317 /* TipperViewModel.swift */,
+				529D207F27A9A39B00793317 /* SwiftUIExtensions.swift */,
 				529D205527A7537C00793317 /* Assets.xcassets */,
 				529D205727A7537C00793317 /* Preview Content */,
 			);
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				529D205427A7537B00793317 /* ContentView.swift in Sources */,
+				529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */,
 				529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */,
 				529D207C27A75EC800793317 /* TipperViewModel.swift in Sources */,
 			);
