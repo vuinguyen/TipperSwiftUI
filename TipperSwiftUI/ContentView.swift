@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @State var billAmount: String = ""
+    @State var selectedTipPercentage: TipPercent = .fifteen
 
     let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
@@ -29,6 +30,14 @@ struct ContentView: View {
                 .font(.title2)
             Text("Tip Percent")
                 .primaryStyle()
+            Picker("What is your favorite color?", selection: $selectedTipPercentage) {
+                ForEach(TipPercent.allCases) { percent in
+                    Text(percent.description)
+                }
+            }
+            .padding(.horizontal)
+            .pickerStyle(.segmented)
+
         }
     }
 }

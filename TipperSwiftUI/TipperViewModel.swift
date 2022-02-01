@@ -12,7 +12,9 @@ protocol segmentedControl {
     var controlIndex: Int { get }
 }
 
-enum TipPercent: Float, segmentedControl {
+enum TipPercent: Float, CaseIterable, Identifiable, segmentedControl {
+    var id: Self { self }
+
     case fifteen = 0.15
     case twenty = 0.20
     case twentyfive = 0.25
