@@ -11,6 +11,7 @@ struct ContentView: View {
 
     @State var billAmount = 0.0
     @State var selectedTipPercentage: TipPercent = .fifteen
+    let viewModel = TipperViewModel()
 
     let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
@@ -18,7 +19,7 @@ struct ContentView: View {
         formatter.maximumFractionDigits = 2
             return formatter
         }()
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Bill Amount")
@@ -46,8 +47,7 @@ struct ContentView: View {
                     Text("Tip Amount")
                         .primaryStyle()
                     Spacer(minLength: 100)
-                    Text(formatter.string(from: NSNumber(value: billAmount)) ?? "$0.00")
-                    //Text(billAmount, format: .currency(code: "CAD"))
+                    Text(formatter.string(for: viewModel.getTipAmount(tipPercent: selectedTipPercentage, billAmount: Float(billAmount))) ?? "$0.00")
                     Spacer()
                         .frame(width: 20)
                 }
@@ -59,7 +59,7 @@ struct ContentView: View {
                     Text("Bill Total")
                         .primaryStyle()
                     Spacer(minLength: 100)
-                    Text("$176.42")
+                    Text(formatter.string(for: viewModel.getBillTotal(tipPercent: selectedTipPercentage, billAmount: Float(billAmount))) ?? "$0.00")
                     Spacer()
                         .frame(width: 20)
                 }
