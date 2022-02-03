@@ -43,6 +43,13 @@ enum TipPercent: Float, CaseIterable, Identifiable, segmentedControl {
 }
 
 class TipperViewModel {
+    let formatter: NumberFormatter = {
+            let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+            return formatter
+        }()
+
     func getBillAmount(billText: String = "") -> Float {
         var billAmount = billText
         let nonNumerals: Set<Character> = ["$"]
@@ -60,6 +67,11 @@ class TipperViewModel {
         return "$\(roundedValue)"
     }
 
+    func getTipAmountStringFormatted(tipPercent: TipPercent, billAmount: Float) -> String {
+        let tipAmount = getTipAmount(tipPercent: tipPercent, billAmount: billAmount)
+        return formatter.string(for: tipAmount) ?? "$0.00"
+    }
+
     func getBillTotal(tipPercent: TipPercent, billAmount: Float) -> Float {
         let tipAmount = getTipAmount(tipPercent: tipPercent, billAmount: billAmount)
         return billAmount + tipAmount
@@ -69,5 +81,10 @@ class TipperViewModel {
         // round to 2 decimal places for display
         let roundedValue = round(billTotal * 100) / 100.0
         return "$\(roundedValue)"
+    }
+
+    func getBillTotalStringFormatted(tipPercent: TipPercent, billAmount: Float) -> String {
+        let billAmount = getBillTotal(tipPercent: tipPercent, billAmount: billAmount)
+        return formatter.string(for: billAmount) ?? "$0.00"
     }
 }

@@ -39,6 +39,12 @@ class TipperSwiftUITests: XCTestCase {
         XCTAssertEqual(tipperViewModel.getTipAmountString(tipAmount: tipAmount), tipAmountString)
     }
 
+    func testGetTipAmountStringFormatted() {
+        let tipPercent = TipPercent.twentyfive
+        let billAmount = Float(23.0)
+        XCTAssertEqual(tipperViewModel.getTipAmountStringFormatted(tipPercent: tipPercent, billAmount: billAmount), "$5.75")
+    }
+
     func testGetBillTotal() {
         let tipPercent = TipPercent.twenty
         let billAmount = Float(20)
@@ -50,6 +56,12 @@ class TipperSwiftUITests: XCTestCase {
         let billTotal = Float(24.0)
         let billTotalString = "$24.0"
         XCTAssertEqual(tipperViewModel.getBillTotalString(billTotal: billTotal), billTotalString)
+    }
+
+    func testGetBillTotalStringFormatted() {
+        let tipPercent = TipPercent.twentyfive
+        let billAmount = Float(23.0)
+        XCTAssertEqual(tipperViewModel.getBillTotalStringFormatted(tipPercent: tipPercent, billAmount: billAmount), "$28.75")
     }
 
     func testPerformanceExample() throws {

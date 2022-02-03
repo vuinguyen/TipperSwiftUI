@@ -9,22 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var billAmount = 0.0
+    @State var billAmount = Float(0.0)
     @State var selectedTipPercentage: TipPercent = .fifteen
     let viewModel = TipperViewModel()
-
-    let formatter: NumberFormatter = {
-            let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
-            return formatter
-        }()
 
     var body: some View {
         VStack(alignment: .leading) {
             Text("Bill Amount")
                 .primaryStyle()
-            TextField("", value: $billAmount, formatter: formatter)
+            TextField("", value: $billAmount, formatter: viewModel.formatter)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.decimalPad)
@@ -48,7 +41,7 @@ struct ContentView: View {
                     Text("Tip Amount")
                         .primaryStyle()
                     Spacer(minLength: 100)
-                    Text(formatter.string(for: viewModel.getTipAmount(tipPercent: selectedTipPercentage, billAmount: Float(billAmount))) ?? "$0.00")
+                    Text(viewModel.getTipAmountStringFormatted(tipPercent: selectedTipPercentage, billAmount: billAmount))
                         .font(.subheadline)
                         .fontWeight(.regular)
                     // Color in hex #323A56
@@ -64,7 +57,7 @@ struct ContentView: View {
                     Text("Bill Total")
                         .primaryStyle()
                     Spacer(minLength: 100)
-                    Text(formatter.string(for: viewModel.getBillTotal(tipPercent: selectedTipPercentage, billAmount: Float(billAmount))) ?? "$0.00")
+                    Text(viewModel.getBillTotalStringFormatted(tipPercent: selectedTipPercentage, billAmount: billAmount))
                         .font(.title2)
                         .fontWeight(.bold)
                     // Color in hex #323A56
@@ -75,6 +68,7 @@ struct ContentView: View {
             }
             // Color in hex #E4ECFA
             .background(Color(red: 0.8941176470588236, green: 0.9254901960784314, blue: 0.9803921568627451))
+            // Add spacer to push the entire VStack view (above) to the top of the screen
             Spacer()
         }
     }
