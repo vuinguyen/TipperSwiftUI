@@ -44,6 +44,7 @@ struct ContentView: View {
                     .padding(.horizontal)
 
                 // for bill total, make font = .title2, and fontWeight = .bold
+                // for tip amount, make font = .subheadline, and fontWeight = .regular
                 CalculatedAmountView(amountLabel: "Bill Total", amount:  viewModel.getBillTotalStringFormatted(tipPercent: selectedTipPercentage, billAmount: billAmount))
             }
             // Color in hex #E4ECFA
@@ -70,8 +71,8 @@ struct CalculatedAmountView: View {
                 .primaryStyle()
             Spacer(minLength: 100)
             Text(amount)
-                .font(.subheadline)
-                .fontWeight(.regular)
+                .font(.title2)
+                .fontWeight(.bold)
             // Color in hex #323A56
                 .foregroundColor(Color(red: 0.19607843137254902, green: 0.22745098039215686, blue: 0.33725490196078434))
             Spacer()
