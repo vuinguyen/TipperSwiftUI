@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5202D79527EBBBB40089813F /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202D79427EBBBB40089813F /* SegmentedControl.swift */; };
 		529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D205127A7537B00793317 /* TipperSwiftUIApp.swift */; };
 		529D205427A7537B00793317 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D205327A7537B00793317 /* ContentView.swift */; };
 		529D205627A7537C00793317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D205527A7537C00793317 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5202D79427EBBBB40089813F /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		529D204E27A7537B00793317 /* TipperSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipperSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D205127A7537B00793317 /* TipperSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperSwiftUIApp.swift; sourceTree = "<group>"; };
 		529D205327A7537B00793317 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				529D205327A7537B00793317 /* ContentView.swift */,
 				52A6DCB227E3C9DD000C3194 /* CalculatedAmountView.swift */,
 				52A6DCB427E3CA73000C3194 /* TipAmountView.swift */,
+				5202D79427EBBBB40089813F /* SegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5202D79527EBBBB40089813F /* SegmentedControl.swift in Sources */,
 				529D205427A7537B00793317 /* ContentView.swift in Sources */,
 				529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */,
 				52A6DCB527E3CA73000C3194 /* TipAmountView.swift in Sources */,

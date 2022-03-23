@@ -26,6 +26,7 @@ struct ContentView: View {
                 .font(.title2)
             Text("Tip Percent")
                 .primaryStyle()
+            // TODO: Replace the Picker here with the UIKit version (wrapper around UISegmentedControl)
             Picker("What is your favorite color?", selection: $selectedTipPercentage) {
                 ForEach(TipPercent.allCases) { percent in
                     Text(percent.description)
