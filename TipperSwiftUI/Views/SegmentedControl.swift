@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct SegmentedControl: UIViewRepresentable {
+    @Binding var selectedTipPercentage: TipPercent
+    
     func updateUIView(_ uiView: UISegmentedControl, context: Context) {
         // stuff
     }
     
     func makeUIView(context: Context) -> UISegmentedControl {
         let control = UISegmentedControl(items: [TipPercent.fifteen.description, TipPercent.twenty.description, TipPercent.twentyfive.description])
-        control.selectedSegmentIndex = TipPercent.fifteen.controlIndex
+        control.selectedSegmentIndex = selectedTipPercentage.controlIndex
         let clearColor = UIColor(red: 248.0/255.0, green: 248.0/255.0, blue: 248.0/255.0, alpha: 1.0)
         let blueColor = UIColor(red: 67.0/255.0, green: 117.0/255.0, blue: 220.0/255.0, alpha: 1.0)
         control.backgroundColor = clearColor
@@ -25,8 +27,9 @@ struct SegmentedControl: UIViewRepresentable {
 
 
 struct SegmentedControlView_Previews: PreviewProvider {
+    @State static var selectedTipPercentage = TipPercent.fifteen
     static var previews: some View {
-        SegmentedControl()
+        SegmentedControl(selectedTipPercentage: $selectedTipPercentage)
             .previewLayout(.sizeThatFits)
     }
 }
