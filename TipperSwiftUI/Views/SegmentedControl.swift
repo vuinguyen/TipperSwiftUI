@@ -8,10 +8,37 @@
 import SwiftUI
 
 struct SegmentedControl: UIViewRepresentable {
+    class Coordinator: NSObject {
+        var segmentedControl: SegmentedControl
+        
+        init(_ segmentedControl: SegmentedControl) {
+            self.segmentedControl = segmentedControl
+        }
+        
+        @objc func tipPercentChanged(_ sender: UISegmentedControl) {
+            switch sender.selectedSegmentIndex {
+            case TipPercent.fifteen.controlIndex:
+                segmentedControl.selectedTipPercentage = .fifteen
+            case TipPercent.twenty.controlIndex:
+                segmentedControl.selectedTipPercentage = .twenty
+            case TipPercent.twentyfive.controlIndex:
+                segmentedControl.selectedTipPercentage = .twentyfive
+            default:
+                segmentedControl.selectedTipPercentage = .fifteen
+            }
+
+            print("segment selected: \(segmentedControl.selectedTipPercentage.description)")
+        }
+    }
+    
     @Binding var selectedTipPercentage: TipPercent
     
+    func makeCoordinator() -> SegmentedControl.Coordinator {
+        Coordinator(self)
+    }
+    
     func updateUIView(_ uiView: UISegmentedControl, context: Context) {
-        // stuff
+        uiView.selectedSegmentIndex = selectedTipPercentage.controlIndex
     }
     
     func makeUIView(context: Context) -> UISegmentedControl {
@@ -21,6 +48,7 @@ struct SegmentedControl: UIViewRepresentable {
         let blueColor = UIColor(red: 67.0/255.0, green: 117.0/255.0, blue: 220.0/255.0, alpha: 1.0)
         control.backgroundColor = clearColor
         control.selectedSegmentTintColor = blueColor
+        control.addTarget(context.coordinator, action: #selector(Coordinator.tipPercentChanged(_:)), for: .valueChanged)
         return control
     }
 }
