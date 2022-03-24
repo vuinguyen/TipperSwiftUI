@@ -26,18 +26,9 @@ struct ContentView: View {
                 .font(.title2)
             Text("Tip Percent")
                 .primaryStyle()
-            // TODO: Replace the Picker here with the UIKit version (wrapper around UISegmentedControl)
             SegmentedControl(selectedTipPercentage: $selectedTipPercentage)
                 .padding(.horizontal)
             
-            Picker("What is your favorite color?", selection: $selectedTipPercentage) {
-                ForEach(TipPercent.allCases) { percent in
-                    Text(percent.description)
-                }
-            }
-            .padding(.horizontal)
-            .pickerStyle(.segmented)
-
             Spacer()
                 .frame(height: 30)
             VStack {
