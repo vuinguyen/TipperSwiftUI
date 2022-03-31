@@ -26,7 +26,7 @@ struct ContentView: View {
                 .font(.title2)
             Text("Tip Percent")
                 .primaryStyle()
-            Picker("What is your favorite color?", selection: $selectedTipPercentage) {
+            Picker("Select Tip Percentage", selection: $selectedTipPercentage) {
                 ForEach(TipPercent.allCases) { percent in
                     Text(percent.description)
                 }
@@ -37,15 +37,20 @@ struct ContentView: View {
             Spacer()
                 .frame(height: 30)
             VStack {
-
-                CalculatedAmountView(amountLabel: "Tip Amount", amount:  viewModel.getTipAmountStringFormatted(tipPercent: selectedTipPercentage, billAmount: billAmount))
-
+                CalculatedAmountView(amountLabel: "Tip Amount",
+                                     amount: viewModel.getTipAmountStringFormatted(tipPercent:
+                                                                                    selectedTipPercentage,
+                                                                                   billAmount:
+                                                                                    billAmount))
+                
                 Divider()
                     .padding(.horizontal)
-
-                // for bill total, make font = .title2, and fontWeight = .bold
-                // for tip amount, make font = .subheadline, and fontWeight = .regular
-                CalculatedAmountView(amountLabel: "Bill Total", amount:  viewModel.getBillTotalStringFormatted(tipPercent: selectedTipPercentage, billAmount: billAmount))
+                
+                CalculatedAmountView(amountLabel: "Bill Total",
+                                     amount: viewModel.getBillTotalStringFormatted(tipPercent:
+                                                                                    selectedTipPercentage,
+                                                                                   billAmount:
+                                                                                    billAmount))
             }
             // Color in hex #E4ECFA
             .background(Color(red: 0.8941176470588236, green: 0.9254901960784314, blue: 0.9803921568627451))
