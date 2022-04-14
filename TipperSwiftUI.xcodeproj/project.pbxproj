@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5202D79527EBBBB40089813F /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202D79427EBBBB40089813F /* SegmentedControl.swift */; };
+		521B43002808C8D800ACB626 /* GenerosityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B42FF2808C8D800ACB626 /* GenerosityViewController.swift */; };
+		521B43022808C8E300ACB626 /* GenerosityView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B43012808C8E300ACB626 /* GenerosityView.storyboard */; };
+		521B43042808C9CD00ACB626 /* GenerosityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B43032808C9CD00ACB626 /* GenerosityViewModel.swift */; };
 		529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D205127A7537B00793317 /* TipperSwiftUIApp.swift */; };
 		529D205427A7537B00793317 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D205327A7537B00793317 /* ContentView.swift */; };
 		529D205627A7537C00793317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D205527A7537C00793317 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		5202D79427EBBBB40089813F /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		521B42FF2808C8D800ACB626 /* GenerosityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerosityViewController.swift; sourceTree = "<group>"; };
+		521B43012808C8E300ACB626 /* GenerosityView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GenerosityView.storyboard; sourceTree = "<group>"; };
+		521B43032808C9CD00ACB626 /* GenerosityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerosityViewModel.swift; sourceTree = "<group>"; };
 		529D204E27A7537B00793317 /* TipperSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipperSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D205127A7537B00793317 /* TipperSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperSwiftUIApp.swift; sourceTree = "<group>"; };
 		529D205327A7537B00793317 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521B42FE2808C7C900ACB626 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				521B42FF2808C8D800ACB626 /* GenerosityViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		529D204527A7537B00793317 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +120,7 @@
 			children = (
 				529D205127A7537B00793317 /* TipperSwiftUIApp.swift */,
 				52A6DCAF27E3C904000C3194 /* Views */,
+				521B42FE2808C7C900ACB626 /* ViewControllers */,
 				52A6DCB027E3C931000C3194 /* ViewModel */,
 				52A6DCB127E3C94A000C3194 /* Extensions */,
 				529D205527A7537C00793317 /* Assets.xcassets */,
@@ -146,6 +161,7 @@
 				52A6DCB227E3C9DD000C3194 /* CalculatedAmountView.swift */,
 				52A6DCB427E3CA73000C3194 /* TipAmountView.swift */,
 				5202D79427EBBBB40089813F /* SegmentedControl.swift */,
+				521B43012808C8E300ACB626 /* GenerosityView.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +169,7 @@
 		52A6DCB027E3C931000C3194 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				521B43032808C9CD00ACB626 /* GenerosityViewModel.swift */,
 				529D207B27A75EC800793317 /* TipperViewModel.swift */,
 			);
 			path = ViewModel;
@@ -272,6 +289,7 @@
 			files = (
 				529D205927A7537C00793317 /* Preview Assets.xcassets in Resources */,
 				529D205627A7537C00793317 /* Assets.xcassets in Resources */,
+				521B43022808C8E300ACB626 /* GenerosityView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5202D79527EBBBB40089813F /* SegmentedControl.swift in Sources */,
+				521B43002808C8D800ACB626 /* GenerosityViewController.swift in Sources */,
 				529D205427A7537B00793317 /* ContentView.swift in Sources */,
 				529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */,
 				52A6DCB527E3CA73000C3194 /* TipAmountView.swift in Sources */,
 				52A6DCB327E3C9DD000C3194 /* CalculatedAmountView.swift in Sources */,
+				521B43042808C9CD00ACB626 /* GenerosityViewModel.swift in Sources */,
 				529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */,
 				529D207C27A75EC800793317 /* TipperViewModel.swift in Sources */,
 			);
