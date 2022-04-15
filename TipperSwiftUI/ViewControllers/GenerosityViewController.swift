@@ -17,10 +17,17 @@ class GenerosityViewController: UIViewController {
     @IBOutlet weak var imageSegmentedControl: UISegmentedControl!
     
     var imageSelected = ImageSelected.one
-    var defaultSelectedSegmentIndex: Int?
+    var defaultSelectedSegmentIndex: Int?   // TODO: let's remove this from the other project!
+    var delegate: GenerosityViewControllerDelegate?
+    var tipPercentage: TipPercent?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //delegate = self
+        if let percentage = tipPercentage {
+            imageSegmentedControl.selectedSegmentIndex = percentage.controlIndex
+            imageSelectedChanged()
+        }
         if let index = defaultSelectedSegmentIndex {
             imageSegmentedControl.selectedSegmentIndex = index
             imageSelectedChanged()
@@ -43,13 +50,6 @@ class GenerosityViewController: UIViewController {
         default:
             imageSelected = ImageSelected.one
         }
-        imageSelector(self, didFinishSelecting: imageSelected.rawValue)
-    }
-}
-
-extension GenerosityViewController: GenerosityViewControllerDelegate {
-    func imageSelector(_ selector: GenerosityViewController, didFinishSelecting image: String) {
-        // display the new image
-        self.generosityImageView.image = UIImage(named: image)
+        delegate?.imageSelector(self, didFinishSelecting: imageSelected.rawValue)
     }
 }
