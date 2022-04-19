@@ -19,6 +19,9 @@
 		529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D207F27A9A39B00793317 /* SwiftUIExtensions.swift */; };
 		52A6DCB327E3C9DD000C3194 /* CalculatedAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6DCB227E3C9DD000C3194 /* CalculatedAmountView.swift */; };
 		52A6DCB527E3CA73000C3194 /* TipAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6DCB427E3CA73000C3194 /* TipAmountView.swift */; };
+		52C3689E280F46EE004DBA0E /* PaymentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C3689D280F46EE004DBA0E /* PaymentViewController.storyboard */; };
+		52C368A0280F49E0004DBA0E /* PaymentViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3689F280F49E0004DBA0E /* PaymentViewController.View.swift */; };
+		52C368A3280F4D94004DBA0E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C368A1280F4D94004DBA0E /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		529D207F27A9A39B00793317 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		52A6DCB227E3C9DD000C3194 /* CalculatedAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatedAmountView.swift; sourceTree = "<group>"; };
 		52A6DCB427E3CA73000C3194 /* TipAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipAmountView.swift; sourceTree = "<group>"; };
+		52C3689D280F46EE004DBA0E /* PaymentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentViewController.storyboard; sourceTree = "<group>"; };
+		52C3689F280F49E0004DBA0E /* PaymentViewController.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.View.swift; sourceTree = "<group>"; };
+		52C368A1280F4D94004DBA0E /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,9 @@
 				529D205327A7537B00793317 /* ContentView.swift */,
 				52A6DCB227E3C9DD000C3194 /* CalculatedAmountView.swift */,
 				52A6DCB427E3CA73000C3194 /* TipAmountView.swift */,
+				52C3689D280F46EE004DBA0E /* PaymentViewController.storyboard */,
+				52C3689F280F49E0004DBA0E /* PaymentViewController.View.swift */,
+				52C368A1280F4D94004DBA0E /* PaymentViewController.swift */,
 				5202D79427EBBBB40089813F /* SegmentedControl.swift */,
 			);
 			path = Views;
@@ -271,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				529D205927A7537C00793317 /* Preview Assets.xcassets in Resources */,
+				52C3689E280F46EE004DBA0E /* PaymentViewController.storyboard in Resources */,
 				529D205627A7537C00793317 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +309,8 @@
 				5202D79527EBBBB40089813F /* SegmentedControl.swift in Sources */,
 				529D205427A7537B00793317 /* ContentView.swift in Sources */,
 				529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */,
+				52C368A0280F49E0004DBA0E /* PaymentViewController.View.swift in Sources */,
+				52C368A3280F4D94004DBA0E /* PaymentViewController.swift in Sources */,
 				52A6DCB527E3CA73000C3194 /* TipAmountView.swift in Sources */,
 				52A6DCB327E3C9DD000C3194 /* CalculatedAmountView.swift in Sources */,
 				529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */,
