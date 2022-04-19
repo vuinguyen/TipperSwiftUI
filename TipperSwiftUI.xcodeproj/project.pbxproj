@@ -112,6 +112,7 @@
 			children = (
 				529D205127A7537B00793317 /* TipperSwiftUIApp.swift */,
 				52A6DCAF27E3C904000C3194 /* Views */,
+				52C368A5280F64F3004DBA0E /* ViewControllers */,
 				52A6DCB027E3C931000C3194 /* ViewModel */,
 				52A6DCB127E3C94A000C3194 /* Extensions */,
 				529D205527A7537C00793317 /* Assets.xcassets */,
@@ -153,7 +154,6 @@
 				52A6DCB427E3CA73000C3194 /* TipAmountView.swift */,
 				52C3689D280F46EE004DBA0E /* PaymentViewController.storyboard */,
 				52C3689F280F49E0004DBA0E /* PaymentViewController.View.swift */,
-				52C368A1280F4D94004DBA0E /* PaymentViewController.swift */,
 				5202D79427EBBBB40089813F /* SegmentedControl.swift */,
 			);
 			path = Views;
@@ -173,6 +173,14 @@
 				529D207F27A9A39B00793317 /* SwiftUIExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52C368A5280F64F3004DBA0E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				52C368A1280F4D94004DBA0E /* PaymentViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -60,6 +60,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2gz-fj-ivc" secondAttribute="trailing" constant="20" id="kIP-ao-Xi5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="payMethodSegementedControl" destination="2gz-fj-ivc" id="xAh-AB-WlK"/>
+                        <outlet property="tipBasedImageView" destination="AcK-a9-5xx" id="jTZ-2e-aXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

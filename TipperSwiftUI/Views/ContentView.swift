@@ -55,7 +55,7 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 30)
                 
-                NavigationLink(destination: PaymentViewController.View()) {
+                NavigationLink(destination: PaymentViewController.View(selectedTipPercentage: $selectedTipPercentage)) {
                     Text("Pay")
                         .font(.headline)
                         .fontWeight(.semibold)
