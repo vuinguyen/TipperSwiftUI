@@ -22,6 +22,7 @@
 		52C3689E280F46EE004DBA0E /* PaymentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C3689D280F46EE004DBA0E /* PaymentViewController.storyboard */; };
 		52C368A0280F49E0004DBA0E /* PaymentViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3689F280F49E0004DBA0E /* PaymentViewController.View.swift */; };
 		52C368A3280F4D94004DBA0E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C368A1280F4D94004DBA0E /* PaymentViewController.swift */; };
+		52C368A728105EB5004DBA0E /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C368A628105EB5004DBA0E /* PaymentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		52C3689D280F46EE004DBA0E /* PaymentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentViewController.storyboard; sourceTree = "<group>"; };
 		52C3689F280F49E0004DBA0E /* PaymentViewController.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.View.swift; sourceTree = "<group>"; };
 		52C368A1280F4D94004DBA0E /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		52C368A628105EB5004DBA0E /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				529D207B27A75EC800793317 /* TipperViewModel.swift */,
+				52C368A628105EB5004DBA0E /* PaymentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5202D79527EBBBB40089813F /* SegmentedControl.swift in Sources */,
+				52C368A728105EB5004DBA0E /* PaymentViewModel.swift in Sources */,
 				529D205427A7537B00793317 /* ContentView.swift in Sources */,
 				529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */,
 				52C368A0280F49E0004DBA0E /* PaymentViewController.View.swift in Sources */,

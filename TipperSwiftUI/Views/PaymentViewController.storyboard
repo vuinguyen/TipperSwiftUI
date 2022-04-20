@@ -61,7 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="payMethodSegementedControl" destination="2gz-fj-ivc" id="xAh-AB-WlK"/>
+                        <outlet property="paymentMethodSegementedControl" destination="2gz-fj-ivc" id="xAh-AB-WlK"/>
                         <outlet property="tipBasedImageView" destination="AcK-a9-5xx" id="jTZ-2e-aXI"/>
                     </connections>
                 </viewController>
