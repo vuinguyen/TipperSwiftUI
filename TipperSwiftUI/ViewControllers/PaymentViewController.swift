@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PaymentViewControllerDelegate {
-    func paymentSelector(_ selector: PaymentViewController, didFinishSelecting payment: String)
+    func paymentSelector(_ selector: PaymentViewController, didFinishSelecting payment: PaymentMethod)
 }
 
 class PaymentViewController: UIViewController {
@@ -24,6 +24,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         configureImage()
         configureSegmentedControl()
+        paymentMethodSelectedChanged()
     }
 
     private func configureImage() {
@@ -47,7 +48,7 @@ class PaymentViewController: UIViewController {
         default:
             paymentMethodSelected = PaymentMethod.credit
         }
-        delegate?.paymentSelector(self, didFinishSelecting: paymentMethodSelected.description)
+        delegate?.paymentSelector(self, didFinishSelecting: paymentMethodSelected)
     }
     
 }

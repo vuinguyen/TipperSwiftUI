@@ -11,12 +11,13 @@ import UIKit
 extension PaymentViewController {
     struct View {
         @Binding var selectedTipPercentage: TipPercent
+        @Binding var paymentMethod: PaymentMethod?
     }
 }
 
 extension PaymentViewController.View: UIViewControllerRepresentable {
     func makeCoordinator() -> PaymentViewControllerDelegate {
-        PaymentViewController.Delegate(selectedTipPercentage: $selectedTipPercentage)
+        PaymentViewController.Delegate(selectedTipPercentage: $selectedTipPercentage, paymentMethod: $paymentMethod)
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
@@ -34,15 +35,20 @@ extension PaymentViewController.View: UIViewControllerRepresentable {
 private extension PaymentViewController {
     final class Delegate {
         @Binding var selectedTipPercentage: TipPercent
+        @Binding var paymentMethod: PaymentMethod?
         
-        init(selectedTipPercentage: Binding<TipPercent>) {
+        init(selectedTipPercentage: Binding<TipPercent>, paymentMethod: Binding<PaymentMethod?>) {
             _selectedTipPercentage = selectedTipPercentage
+            _paymentMethod = paymentMethod
         }
     }
 }
 
 extension PaymentViewController.Delegate: PaymentViewControllerDelegate {
-    func paymentSelector(_ selector: PaymentViewController, didFinishSelecting payment: String) {
-        print("payment method: \(payment) selected!")
+    func paymentSelector(_ selector: PaymentViewController, didFinishSelecting payment: PaymentMethod) {
+        print("payment method: \(payment.description) selected!")
+        DispatchQueue.main.async {
+            self.paymentMethod = payment
+        }
     }
 }

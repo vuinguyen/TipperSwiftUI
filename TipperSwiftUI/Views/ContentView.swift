@@ -11,6 +11,7 @@ struct ContentView: View {
 
     @State var billAmount = Float(0.0)
     @State var selectedTipPercentage: TipPercent = .fifteen
+    @State var paymentMethod: PaymentMethod?
     let viewModel = TipperViewModel()
     let defaultBillAmount = Float(0.0)
 
@@ -55,12 +56,17 @@ struct ContentView: View {
                 Spacer()
                     .frame(height: 30)
                 
-                NavigationLink(destination: PaymentViewController.View(selectedTipPercentage: $selectedTipPercentage)) {
+                
+                NavigationLink(destination: PaymentViewController.View(selectedTipPercentage: $selectedTipPercentage, paymentMethod: $paymentMethod)) {
                     Text("Pay")
                         .font(.headline)
                         .fontWeight(.semibold)
                 }
                 .disabled(billAmount > defaultBillAmount ? false : true)
+                
+                Text("Paid By: " + (paymentMethod?.description ?? ""))
+                    .primaryStyle()
+                    .hidden(paymentMethod != nil ? false : true)
                 
                 // Add spacer to push the entire VStack view (above) to the top of the screen
                 Spacer()
