@@ -12,12 +12,13 @@ extension PaymentViewController {
     struct View {
         @Binding var selectedTipPercentage: TipPercent
         @Binding var paymentMethod: PaymentMethod?
+        @Binding var payState: PayState
     }
 }
 
 extension PaymentViewController.View: UIViewControllerRepresentable {
     func makeCoordinator() -> PaymentViewControllerDelegate {
-        PaymentViewController.Delegate(selectedTipPercentage: $selectedTipPercentage, paymentMethod: $paymentMethod)
+        PaymentViewController.Delegate(selectedTipPercentage: $selectedTipPercentage, paymentMethod: $paymentMethod, payState: $payState)
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
@@ -36,19 +37,21 @@ private extension PaymentViewController {
     final class Delegate {
         @Binding var selectedTipPercentage: TipPercent
         @Binding var paymentMethod: PaymentMethod?
+        @Binding var payState: PayState
         
-        init(selectedTipPercentage: Binding<TipPercent>, paymentMethod: Binding<PaymentMethod?>) {
+        init(selectedTipPercentage: Binding<TipPercent>, paymentMethod: Binding<PaymentMethod?>, payState: Binding<PayState>) {
             _selectedTipPercentage = selectedTipPercentage
             _paymentMethod = paymentMethod
+            _payState = payState
         }
     }
 }
 
 extension PaymentViewController.Delegate: PaymentViewControllerDelegate {
     func paymentSelector(_ selector: PaymentViewController, didFinishSelecting payment: PaymentMethod) {
-        print("payment method: \(payment.description) selected!")
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
             self.paymentMethod = payment
+            self.payState = .paid
         }
     }
 }

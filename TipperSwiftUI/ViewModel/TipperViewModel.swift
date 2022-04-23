@@ -53,7 +53,13 @@ enum TipPercent: Float, CaseIterable, Identifiable, segmentedControl {
     }
 }
 
-class TipperViewModel {
+enum PayState: String {
+    case notpaid = "Not Paid"
+    case paying = "Paying"
+    case paid = "Paid"
+}
+
+class TipperViewModel: ObservableObject {
     let formatter: NumberFormatter = {
             let formatter = NumberFormatter()
         formatter.numberStyle = .currency
