@@ -19,8 +19,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                Text("Bill Amount")
-                    .primaryStyle()
+                HStack {
+                    Text("Bill Amount")
+                        .primaryStyle()
+                    Spacer(minLength: 10.0)
+                }
                 TextField("", value: $billAmount, formatter: tipperViewModel.formatter)
                     .padding()
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -31,8 +34,11 @@ struct ContentView: View {
                     .onChange(of: billAmount) { newBillAmount in
                         payState = newBillAmount == defaultBillAmount ? .notpaid : .paying
                     }
-                Text("Tip Percent")
-                    .primaryStyle()
+                HStack {
+                    Text("Tip Percent")
+                        .primaryStyle()
+                    Spacer(minLength: 10.0)
+                }
                 SegmentedControl(selectedTipPercentage: $selectedTipPercentage)
                     .padding(.horizontal)
                     .onChange(of: selectedTipPercentage) { _ in
