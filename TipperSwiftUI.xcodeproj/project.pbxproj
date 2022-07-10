@@ -119,10 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				529D205127A7537B00793317 /* TipperSwiftUIApp.swift */,
-				52A6DCAF27E3C904000C3194 /* Views */,
+				52A6DCB127E3C94A000C3194 /* Extensions */,
 				5213F92E287A7E9F008A9DE1 /* ViewControllers */,
 				52A6DCB027E3C931000C3194 /* ViewModels */,
-				52A6DCB127E3C94A000C3194 /* Extensions */,
+				52A6DCAF27E3C904000C3194 /* Views */,
 				529D205527A7537C00793317 /* Assets.xcassets */,
 				529D205727A7537C00793317 /* Preview Content */,
 			);
@@ -169,8 +169,8 @@
 		52A6DCB027E3C931000C3194 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				5213F928287A79F7008A9DE1 /* PaymentViewModel.swift */,
 				529D207B27A75EC800793317 /* TipperViewModel.swift */,
+				5213F928287A79F7008A9DE1 /* PaymentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
