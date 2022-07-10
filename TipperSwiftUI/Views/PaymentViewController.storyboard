@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Payment View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" id="Y6W-OH-hqX" customClass="PaymentViewController" customModule="TipperSwiftUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for the tip!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C9-nM-WLf">
+                                <rect key="frame" x="81" y="20" width="158.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-15percent" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-a9-5xx">
+                                <rect key="frame" x="60" y="64" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Bat-rh-Wlr"/>
+                                    <constraint firstAttribute="height" constant="200" id="PdN-cE-BGH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you like to pay?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-jY-xQE">
+                                <rect key="frame" x="42" y="284" width="236" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2gz-fj-ivc">
+                                <rect key="frame" x="20" y="328" width="280" height="32"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Credit"/>
+                                    <segment title="Apple Pay"/>
+                                    <segment title="Cash"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.2627450980392157" green="0.45882352941176469" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6C9-nM-WLf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="D2T-wn-G1p"/>
+                            <constraint firstItem="2gz-fj-ivc" firstAttribute="top" secondItem="gUU-jY-xQE" secondAttribute="bottom" constant="20" id="Oed-bz-829"/>
+                            <constraint firstItem="AcK-a9-5xx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qf5-63-nYt"/>
+                            <constraint firstItem="6C9-nM-WLf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="R6f-gR-f3Z"/>
+                            <constraint firstItem="AcK-a9-5xx" firstAttribute="top" secondItem="6C9-nM-WLf" secondAttribute="bottom" constant="20" id="S4Q-er-Fdz"/>
+                            <constraint firstItem="gUU-jY-xQE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="YJq-Bb-Mxr"/>
+                            <constraint firstItem="gUU-jY-xQE" firstAttribute="top" secondItem="AcK-a9-5xx" secondAttribute="bottom" constant="20" id="YqB-wO-58w"/>
+                            <constraint firstItem="2gz-fj-ivc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="dul-a3-rhw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2gz-fj-ivc" secondAttribute="trailing" constant="20" id="kIP-ao-Xi5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paymentMethodSegementedControl" destination="2gz-fj-ivc" id="xAh-AB-WlK"/>
+                        <outlet property="tipBasedImageView" destination="AcK-a9-5xx" id="jTZ-2e-aXI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.375" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image-15percent" width="345.5" height="319.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -40,6 +40,23 @@ enum TipPercent: Float, CaseIterable, Identifiable, segmentedControl {
             return 2
         }
     }
+
+    var image: String {
+        switch self {
+        case .fifteen:
+            return "Image-15percent"
+        case .twenty:
+            return "Image-20percent"
+        case .twentyfive:
+            return "Image-25percent"
+        }
+    }
+}
+
+enum PayState: String {
+    case notpaid = "Not Paid"
+    case paying = "Paying"
+    case paid = "Paid"
 }
 
 class TipperViewModel {

@@ -21,4 +21,15 @@ enum PaymentMethod {
             return "Cash"
         }
     }
+
+    var controlIndex: Int {
+        switch self {
+        case .credit:
+            return 0
+        case .applepay:
+            return 1
+        case .cash:
+            return 2
+        }
+    }
 }

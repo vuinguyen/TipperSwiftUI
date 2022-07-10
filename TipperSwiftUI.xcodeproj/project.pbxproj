@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5213F929287A79F7008A9DE1 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213F928287A79F7008A9DE1 /* PaymentViewModel.swift */; };
+		5213F92C287A7E6B008A9DE1 /* PaymentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5213F92A287A7E6B008A9DE1 /* PaymentViewController.storyboard */; };
+		5213F92D287A7E6B008A9DE1 /* PaymentViewController.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213F92B287A7E6B008A9DE1 /* PaymentViewController.View.swift */; };
+		5213F930287A7EDA008A9DE1 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213F92F287A7EDA008A9DE1 /* PaymentViewController.swift */; };
 		529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D205127A7537B00793317 /* TipperSwiftUIApp.swift */; };
 		529D205427A7537B00793317 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D205327A7537B00793317 /* ContentView.swift */; };
 		529D205627A7537C00793317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529D205527A7537C00793317 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		5213F928287A79F7008A9DE1 /* PaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		5213F92A287A7E6B008A9DE1 /* PaymentViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymentViewController.storyboard; sourceTree = "<group>"; };
+		5213F92B287A7E6B008A9DE1 /* PaymentViewController.View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.View.swift; sourceTree = "<group>"; };
+		5213F92F287A7EDA008A9DE1 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		529D204E27A7537B00793317 /* TipperSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipperSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529D205127A7537B00793317 /* TipperSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperSwiftUIApp.swift; sourceTree = "<group>"; };
 		529D205327A7537B00793317 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5213F92E287A7E9F008A9DE1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5213F92F287A7EDA008A9DE1 /* PaymentViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		529D204527A7537B00793317 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +120,7 @@
 			children = (
 				529D205127A7537B00793317 /* TipperSwiftUIApp.swift */,
 				52A6DCAF27E3C904000C3194 /* Views */,
+				5213F92E287A7E9F008A9DE1 /* ViewControllers */,
 				52A6DCB027E3C931000C3194 /* ViewModels */,
 				52A6DCB127E3C94A000C3194 /* Extensions */,
 				529D205527A7537C00793317 /* Assets.xcassets */,
@@ -144,6 +159,8 @@
 			children = (
 				529D205327A7537B00793317 /* ContentView.swift */,
 				52A6DCB227E3C9DD000C3194 /* CalculatedAmountView.swift */,
+				5213F92A287A7E6B008A9DE1 /* PaymentViewController.storyboard */,
+				5213F92B287A7E6B008A9DE1 /* PaymentViewController.View.swift */,
 				52A6DCB427E3CA73000C3194 /* TipAmountView.swift */,
 			);
 			path = Views;
@@ -270,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5213F92C287A7E6B008A9DE1 /* PaymentViewController.storyboard in Resources */,
 				529D205927A7537C00793317 /* Preview Assets.xcassets in Resources */,
 				529D205627A7537C00793317 /* Assets.xcassets in Resources */,
 			);
@@ -298,10 +316,12 @@
 			files = (
 				529D205427A7537B00793317 /* ContentView.swift in Sources */,
 				529D208027A9A39B00793317 /* SwiftUIExtensions.swift in Sources */,
+				5213F92D287A7E6B008A9DE1 /* PaymentViewController.View.swift in Sources */,
 				52A6DCB527E3CA73000C3194 /* TipAmountView.swift in Sources */,
 				52A6DCB327E3C9DD000C3194 /* CalculatedAmountView.swift in Sources */,
 				529D205227A7537B00793317 /* TipperSwiftUIApp.swift in Sources */,
 				5213F929287A79F7008A9DE1 /* PaymentViewModel.swift in Sources */,
+				5213F930287A7EDA008A9DE1 /* PaymentViewController.swift in Sources */,
 				529D207C27A75EC800793317 /* TipperViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
