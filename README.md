@@ -31,7 +31,7 @@ See the tagged releases for **payscreen** to see the code for the calculator in 
 <div>
 <img src="/screenshots/payscreen/beforepayment.png" width="250" />
 
-<img src="/screenshots/payscreen/seleectpayment.png" width="250" />
+<img src="/screenshots/payscreen/selectpayment.png" width="250" />
 
 <img src="/screenshots/payscreen/afterpayment.png" width="250" />
 </div>
